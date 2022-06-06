@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --body: 16px;
+    --off-cyan: hsla(179, 62%, 43%, 0.699);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--Light-Gray);
+}
+
+.container {
+    padding: 1rem;
+}
+
+.card {
+    border-radius: 10px;
+    max-width: 675px;
+    margin-inline: auto;
+    box-shadow: 0 0px 10px 0 rgba(0,0,0,0.1), 0 0px 10px 0 rgba(0,0,0,0.1);
+}
+
+.top {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.top, .left, .right {
+    padding: 40px;
+}
+
+.top h1 {
+    color: var(--Cyan);
+    margin-bottom: 15px;
+}
+
+.top h2 {
+    color: var(--Bright-Yellow);
+    font-size: 18px;
+}
+
+.top p {
+    color: var(--Grayish-Blue);
+    width: 90%;
+}
+
+.bottom .left {
+    background-color: var(--Cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.bottom .left .price p {
+    color: var(--Light-Gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottom .right {
+    background-color: var(--off-cyan);
+}
+
+.bottom .left, .bottom .right, .left span, button {
+    color: white;
+}
+
+.left span {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.bottom .right ul {
+    color: var(--Light-Gray);
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--Bright-Yellow);
+    overflow: hidden;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+@media screen and (min-width: 40em) {
+    .card .bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
